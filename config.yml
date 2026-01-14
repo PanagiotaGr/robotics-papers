@@ -1,28 +1,20 @@
-# Robotics ArXiv Daily configuration
-
-# How many days back to consider as "new"
 days_back: 2
-
-# Maximum papers per topic per run (keeps the digest readable)
 max_results_per_topic: 20
 
-# arXiv categories to query (broad robotics coverage)
 categories:
-  - cs.RO        # Robotics
-  - cs.CV        # Computer Vision
-  - cs.AI        # AI
-  - cs.LG        # Machine Learning
-  - eess.IV      # Intelligent Vehicles
-  - eess.SP      # Signal Processing
-  - stat.ML      # ML (stats)
+  - cs.RO
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  - eess.IV
+  - eess.SP
+  - stat.ML
 
-# Topic buckets: each bucket is a name + list of keywords
 topics:
   Autonomous Driving & AV:
     - autonomous driving
     - self-driving
     - intelligent vehicles
-    - perception
     - motion forecasting
     - trajectory planning
     - behavior prediction
@@ -31,39 +23,35 @@ topics:
     - 3d detection
     - multi-object tracking
     - occupancy
-    - BEV
+    - bev
     - bird's-eye view
-    - HD map
-    - mapless
-    - nuScenes
-    - Waymo
-    - KITTI
-    - Argoverse
-    - OpenDrive
+    - hd map
+    - nuscenes
+    - waymo
+    - kitti
+    - argoverse
 
   Drones & Aerial Robotics:
     - drone
-    - UAV
+    - uav
     - aerial robotics
     - quadrotor
     - visual-inertial
-    - VIO
-    - aerial mapping
+    - vio
     - autonomous flight
     - landing
     - obstacle avoidance
 
   SLAM, Localization & Mapping:
-    - SLAM
+    - slam
     - localization
     - mapping
     - loop closure
-    - LiDAR SLAM
-    - visual SLAM
-    - LiDAR-inertial
+    - lidar slam
+    - visual slam
     - place recognition
-    - pose graph
     - odometry
+    - pose graph
 
   Navigation, Planning & Control:
     - navigation
@@ -71,12 +59,11 @@ topics:
     - path planning
     - replanning
     - model predictive control
-    - MPC
+    - mpc
     - optimal control
-    - sampling-based planning
-    - RRT
-    - A*
-    - D*
+    - rrt
+    - a*
+    - d*
     - risk-aware
     - safe planning
 
@@ -86,20 +73,16 @@ topics:
     - grasping
     - dexterous
     - tactile
-    - in-hand manipulation
-    - pick and place
 
   Robot Learning (RL, IL, Foundation Models):
     - reinforcement learning
     - imitation learning
-    - policy learning
     - diffusion policy
     - behavior cloning
     - foundation model
     - vision-language-action
-    - VLA
-    - LLM
-    - instruction following
+    - vla
+    - llm
 
   Multi-Robot & Swarms:
     - multi-robot
@@ -117,17 +100,15 @@ topics:
     - out-of-distribution
     - robustness
     - adversarial
-    - intrusion detection
-    - fault detection
     - anomaly detection
+    - fault detection
 
   3D Gaussian Splatting & Neural Rendering (Robotics):
     - gaussian splatting
     - 3d gaussian splatting
-    - 3DGS
+    - 3dgs
     - neural rendering
+    - nerf
     - radiance field
-    - NeRF
     - novel view synthesis
-    - photogrammetry
-    - 3D reconstruction
+    - 3d reconstruction
