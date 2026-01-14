@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-
 """
 Robotics ArXiv Daily
-- Queries the arXiv Atom API by category.
-- Filters results into topic buckets using keyword matching.
+- Queries arXiv API by category.
+- Filters into topic buckets via keyword matching (title + abstract).
 - Writes:
   1) digests/YYYY-MM-DD.md  (daily archive)
-  2) README.md (updates a "Today" section at the top)
-- Keeps a small local database to avoid duplicates across runs.
+  2) topics/<topic>.md      (one file per topic)
+  3) README.md "Today" block with links + previews
 
 Run:
   python scripts/fetch_arxiv_daily.py
@@ -27,12 +26,12 @@ import requests
 import yaml
 from dateutil import parser as dateparser
 
-
 ARXIV_API = "https://export.arxiv.org/api/query"
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 CONFIG_PATH = os.path.join(REPO_ROOT, "config.yml")
 DB_PATH = os.path.join(REPO_ROOT, "state_db.json")
 DIGEST_DIR = os.path.join(REPO_ROOT, "digests")
+TOPICS_DIR = os.path.join(REPO_ROOT, "topics")
 README_PATH = os.path.join(REPO_ROOT, "README.md")
 
 
@@ -72,8 +71,13 @@ def normalize(text: str) -> str:
     return text.strip()
 
 
-def arxiv_query(category: str, max_results: int = 200) -> List[Paper]:
-    # Sort by submittedDate descending; start=0; use Atom
+def slugify(name: str) -> str:
+    s = name.lower()
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    return s or "topic"
+
+
+def arxiv_query(category: str, max_results: int = 250) -> List[Paper]:
     params = {
         "search_query": f"cat:{category}",
         "start": 0,
@@ -87,7 +91,6 @@ def arxiv_query(category: str, max_results: int = 200) -> List[Paper]:
 
     papers: List[Paper] = []
     for e in feed.entries:
-        # arXiv ID is in e.id like "http://arxiv.org/abs/XXXX.XXXXXv1"
         link_abs = e.id.replace("http://", "https://")
         arxiv_id = link_abs.rsplit("/", 1)[-1]
 
@@ -96,7 +99,6 @@ def arxiv_query(category: str, max_results: int = 200) -> List[Paper]:
         published = dateparser.parse(e.published)
         updated = dateparser.parse(e.updated)
 
-        # Find PDF link
         pdf = ""
         for l in e.links:
             if getattr(l, "type", "") == "application/pdf":
@@ -106,11 +108,11 @@ def arxiv_query(category: str, max_results: int = 200) -> List[Paper]:
             pdf = link_abs.replace("/abs/", "/pdf/") + ".pdf"
 
         primary = ""
-        # primary_category may exist; else fallback to first tag
         if hasattr(e, "arxiv_primary_category"):
             primary = e.arxiv_primary_category.get("term", "")
         elif hasattr(e, "tags") and e.tags:
             primary = e.tags[0].get("term", "")
+
         summary = " ".join(getattr(e, "summary", "").split())
 
         papers.append(
@@ -142,8 +144,7 @@ def match_keywords(p: Paper, keywords: List[str]) -> List[str]:
     matched = []
     for kw in keywords:
         nkw = normalize(kw)
-        # simple substring match with word boundary-ish handling
-        if nkw in hay:
+        if nkw and nkw in hay:
             matched.append(kw)
     return matched
 
@@ -154,64 +155,107 @@ def format_paper_md(p: Paper, matched: List[str]) -> str:
     tags = ", ".join(matched[:8]) if matched else ""
     cat = p.primary_category or "unknown"
     return (
-        f"- **{p.title}**\\n"
-        f"  - Authors: {authors}\\n"
-        f"  - Published: {pub} | Category: `{cat}`\\n"
-        f"  - Links: [arXiv]({p.link_abs}) | [PDF]({p.link_pdf})\\n"
-        f"  - Matched: {tags}\\n"
+        f"- **{p.title}**\n"
+        f"  - Authors: {authors}\n"
+        f"  - Published: {pub} | Category: `{cat}`\n"
+        f"  - Links: [arXiv]({p.link_abs}) | [PDF]({p.link_pdf})\n"
+        f"  - Matched: {tags}\n"
     )
 
 
-def ensure_digest_dir() -> None:
-    os.makedirs(DIGEST_DIR, exist_ok=True)
+def ensure_dir(path: str) -> None:
+    os.makedirs(path, exist_ok=True)
 
 
 def write_daily_digest(today: str, sections: Dict[str, List[str]]) -> str:
-    ensure_digest_dir()
+    ensure_dir(DIGEST_DIR)
     path = os.path.join(DIGEST_DIR, f"{today}.md")
 
-    lines = []
-    lines.append(f"# Daily Digest — {today}\\n")
-    lines.append("Auto-generated from the arXiv API using keyword/topic filters.\\n")
-    lines.append("> Tip: edit `config.yml` to adjust topics, keywords, and limits.\\n")
+    lines = [f"# Daily Digest — {today}", ""]
+    lines.append("Auto-generated from arXiv using topic keyword filters.")
+    lines.append("> Edit `config.yml` to adjust topics/keywords and limits.\n")
 
     for topic, items in sections.items():
-        lines.append(f"## {topic}\\n")
+        lines.append(f"## {topic}\n")
         if not items:
-            lines.append("_No matches today._\\n")
+            lines.append("_No matches today._\n")
         else:
-            lines.extend(items)
+            lines.extend([x.strip() for x in items])
             lines.append("")
 
     with open(path, "w", encoding="utf-8") as f:
-        f.write("\\n".join(lines).strip() + "\\n")
+        f.write("\n".join(lines).strip() + "\n")
     return path
 
 
-def update_readme(today: str, digest_rel_path: str, sections: Dict[str, List[str]]) -> None:
+def write_topics(today: str, sections: Dict[str, List[str]]) -> Dict[str, str]:
+    """
+    One file per topic:
+      topics/<slug>.md
+    Returns: topic -> relative path
+    """
+    ensure_dir(TOPICS_DIR)
+    topic_paths: Dict[str, str] = {}
+
+    for topic, items in sections.items():
+        slug = slugify(topic)
+        path = os.path.join(TOPICS_DIR, f"{slug}.md")
+        rel = os.path.relpath(path, REPO_ROOT)
+        topic_paths[topic] = rel
+
+        lines = [f"# {topic}", ""]
+        lines.append(f"**Last update:** {today}")
+        lines.append("")
+        lines.append("> Auto-generated. Edit `config.yml` to change keywords/topics.")
+        lines.append("")
+
+        if not items:
+            lines.append("_No matches today._")
+        else:
+            lines.append("## Latest\n")
+            lines.extend([x.strip() for x in items])
+
+        lines.append("\n---\n")
+        lines.append("Back to main page: [README](../README.md)")
+
+        with open(path, "w", encoding="utf-8") as f:
+            f.write("\n".join(lines).strip() + "\n")
+
+    return topic_paths
+
+
+def update_readme(today: str, digest_rel_path: str, sections: Dict[str, List[str]], topic_paths: Dict[str, str]) -> None:
     begin = "<!-- BEGIN TODAY -->"
     end = "<!-- END TODAY -->"
 
-    today_block_lines = []
-    today_block_lines.append("## ✅ Today")
-    today_block_lines.append(f"**Last update:** {today}  ")
-    today_block_lines.append(f"**Daily archive:** `{digest_rel_path}`  ")
-    today_block_lines.append("")
-    today_block_lines.append("_Auto-generated. Edit `config.yml` to change topics/keywords._")
-    today_block_lines.append("")
+    lines: List[str] = []
+    lines.append("## ✅ Today\n")
+    lines.append(f"**Last update:** {today}  ")
+    lines.append(f"**Daily archive:** `{digest_rel_path}`  ")
+    lines.append("")
+    lines.append("_Auto-generated. Edit `config.yml` to change topics/keywords._\n")
 
+    lines.append("### Browse by topic (links)\n")
+    for topic in sections.keys():
+        rel = topic_paths.get(topic)
+        if rel:
+            lines.append(f"- **[{topic}]({rel})**")
+    lines.append("")
+
+    # previews
     for topic, items in sections.items():
-        today_block_lines.append(f"### {topic}")
+        lines.append(f"### {topic}\n")
         if not items:
-            today_block_lines.append("_No matches today._")
+            lines.append("_No matches today._\n")
         else:
             preview = items[: min(3, len(items))]
-            today_block_lines.extend([x.strip() for x in preview])
-            if len(items) > 3:
-                today_block_lines.append(f"- _(See full list in `{digest_rel_path}`)_")
-        today_block_lines.append("")
+            lines.extend([x.strip() for x in preview])
+            rel = topic_paths.get(topic)
+            if rel:
+                lines.append(f"- _(See full topic page: [{topic}]({rel}))_\n")
+        lines.append("")
 
-    today_block = "\n".join(today_block_lines).strip()
+    today_block = "\n".join(lines).strip()
 
     if not os.path.exists(README_PATH):
         with open(README_PATH, "w", encoding="utf-8") as f:
@@ -222,16 +266,13 @@ def update_readme(today: str, digest_rel_path: str, sections: Dict[str, List[str
         original = f.read()
 
     if begin not in original or end not in original:
-        # If markers are missing, append them once (safe fallback)
         original = original.rstrip() + f"\n\n{begin}\n{today_block}\n{end}\n"
     else:
         pattern = re.compile(re.escape(begin) + r".*?" + re.escape(end), re.DOTALL)
-        replacement = f"{begin}\n{today_block}\n{end}"
-        original = pattern.sub(replacement, original)
+        original = pattern.sub(f"{begin}\n{today_block}\n{end}", original)
 
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(original)
-
 
 
 def main() -> None:
@@ -244,35 +285,28 @@ def main() -> None:
     db = load_db()
     seen = set(db.get("seen_ids", []))
 
-    # Collect recent papers across categories
     recent: List[Paper] = []
     for cat in categories:
         try:
             papers = arxiv_query(cat, max_results=250)
             for p in papers:
-                if not is_recent(p, days_back=days_back):
-                    # because sorted by submittedDate desc, can break early
-                    continue
-                recent.append(p)
+                if is_recent(p, days_back=days_back):
+                    recent.append(p)
         except Exception as e:
             print(f"[WARN] Failed category {cat}: {e}")
 
-    # Deduplicate across categories by arxiv_id (versioned IDs may differ; keep full id)
+    # Deduplicate across categories by base id (drop version suffix)
     uniq: Dict[str, Paper] = {}
     for p in recent:
-        # normalize base id without version for dedup
-        base_id = re.sub(r"v\\d+$", "", p.arxiv_id)
+        base_id = re.sub(r"v\d+$", "", p.arxiv_id)
         if base_id not in uniq or p.updated > uniq[base_id].updated:
             uniq[base_id] = p
-    papers = list(uniq.values())
 
     sections: Dict[str, List[str]] = {t: [] for t in topics.keys()}
+    assignments: Dict[str, Tuple[str, List[str]]] = {}
 
-    # Match into topics with keyword filter; also avoid duplicates across topics by "best match" score
-    # We'll assign each paper to the topic with the most matched keywords.
-    assignments: Dict[str, Tuple[str, List[str]]] = {}  # base_id -> (topic, matched)
-    for p in papers:
-        base_id = re.sub(r"v\\d+$", "", p.arxiv_id)
+    # Assign each paper to best matching topic (most matched keywords)
+    for base_id, p in uniq.items():
         if base_id in seen:
             continue
 
@@ -287,12 +321,16 @@ def main() -> None:
         if best_topic and best_matched:
             assignments[base_id] = (best_topic, best_matched)
 
-    # Build markdown per topic with cap
-    per_topic_counts = {t: 0 for t in topics.keys()}
-    # Sort assignments by published desc
-    sorted_items = sorted(assignments.items(), key=lambda kv: papers_sort_key(kv[0], uniq), reverse=True)
+    # Sort by published date desc
+    sorted_ids = sorted(
+        assignments.keys(),
+        key=lambda bid: (uniq[bid].published if uniq[bid].published.tzinfo else uniq[bid].published.replace(tzinfo=dt.timezone.utc)),
+        reverse=True,
+    )
 
-    for base_id, (topic, matched) in sorted_items:
+    per_topic_counts = {t: 0 for t in topics.keys()}
+    for base_id in sorted_ids:
+        topic, matched = assignments[base_id]
         if per_topic_counts[topic] >= per_topic_cap:
             continue
         p = uniq[base_id]
@@ -300,27 +338,18 @@ def main() -> None:
         per_topic_counts[topic] += 1
         seen.add(base_id)
 
-    # Save db
-    db["seen_ids"] = sorted(list(seen))[-50000:]  # keep last N ids
+    db["seen_ids"] = sorted(list(seen))[-50000:]
     save_db(db)
 
     today = dt.datetime.now(dt.timezone.utc).date().isoformat()
     digest_path = write_daily_digest(today, sections)
     digest_rel = os.path.relpath(digest_path, REPO_ROOT)
 
-    update_readme(today, digest_rel, sections)
+    topic_paths = write_topics(today, sections)
+    update_readme(today, digest_rel, sections, topic_paths)
 
     print(f"Updated: {digest_rel}")
-    total = sum(len(v) for v in sections.values())
-    print(f"New papers added: {total}")
-
-
-def papers_sort_key(base_id: str, uniq: Dict[str, Paper]) -> dt.datetime:
-    p = uniq[base_id]
-    pub = p.published
-    if pub.tzinfo is None:
-        pub = pub.replace(tzinfo=dt.timezone.utc)
-    return pub
+    print(f"Topics written: {len(topic_paths)}")
 
 
 if __name__ == "__main__":
