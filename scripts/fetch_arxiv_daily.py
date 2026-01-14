@@ -189,75 +189,49 @@ def write_daily_digest(today: str, sections: Dict[str, List[str]]) -> str:
 
 
 def update_readme(today: str, digest_rel_path: str, sections: Dict[str, List[str]]) -> None:
-    """
-    Inserts/updates a 'Today' block at the top of README.md.
-    We keep the rest of README.md intact.
-    """
+    begin = "<!-- BEGIN TODAY -->"
+    end = "<!-- END TODAY -->"
+
     today_block_lines = []
-    today_block_lines.append("## ✅ Today\\n")
-    today_block_lines.append(f"**Last update:** {today}  \\n")
-    today_block_lines.append(f"**Daily archive:** `{digest_rel_path}`  \\n")
+    today_block_lines.append("## ✅ Today")
+    today_block_lines.append(f"**Last update:** {today}  ")
+    today_block_lines.append(f"**Daily archive:** `{digest_rel_path}`  ")
     today_block_lines.append("")
-    today_block_lines.append("_This section is auto-generated. For configuration, edit `config.yml`._\\n")
+    today_block_lines.append("_Auto-generated. Edit `config.yml` to change topics/keywords._")
     today_block_lines.append("")
 
-    # Show a compact preview (first 3 items per topic)
     for topic, items in sections.items():
-        today_block_lines.append(f"### {topic}\\n")
+        today_block_lines.append(f"### {topic}")
         if not items:
-            today_block_lines.append("_No matches today._\\n")
+            today_block_lines.append("_No matches today._")
         else:
             preview = items[: min(3, len(items))]
-            today_block_lines.extend(preview)
+            today_block_lines.extend([x.strip() for x in preview])
             if len(items) > 3:
-                today_block_lines.append(f"  - _(See full list in `{digest_rel_path}`)_\\n")
+                today_block_lines.append(f"- _(See full list in `{digest_rel_path}`)_")
         today_block_lines.append("")
 
-    today_block = "\\n".join(today_block_lines).strip() + "\\n"
+    today_block = "\n".join(today_block_lines).strip()
 
     if not os.path.exists(README_PATH):
-        # If README doesn't exist yet, create minimal one
-        base = "# Robotics ArXiv Daily\\n\\n"
         with open(README_PATH, "w", encoding="utf-8") as f:
-            f.write(base + today_block)
+            f.write(f"# Robotics ArXiv Daily\n\n{begin}\n{today_block}\n{end}\n")
         return
 
     with open(README_PATH, "r", encoding="utf-8") as f:
         original = f.read()
 
-    start_marker = "## ✅ Today"
-    # If there's already a Today block, replace it up to the next H2
-    if start_marker in original:
-        # Replace from start_marker until next "\n## " after it
-        idx = original.index(start_marker)
-        rest = original[idx:]
-        m = re.search(r"\\n##\\s", rest[5:])  # look for next H2 after some chars
-        if m:
-            cut = idx + 5 + m.start()
-            new_content = original[:idx].rstrip() + "\\n\\n" + today_block + "\\n" + original[cut:].lstrip()
-        else:
-            new_content = original[:idx].rstrip() + "\\n\\n" + today_block
+    if begin not in original or end not in original:
+        # If markers are missing, append them once (safe fallback)
+        original = original.rstrip() + f"\n\n{begin}\n{today_block}\n{end}\n"
     else:
-        # Insert after the first H1 block (or at top)
-        parts = original.split("\\n", 2)
-        if parts and parts[0].startswith("# "):
-            # keep first paragraph, insert Today after first blank line
-            new_content = original.strip() + "\\n\\n"  # fallback
-            # Try a cleaner insert: after first two lines
-            lines = original.splitlines()
-            insert_at = 1
-            # find first blank line
-            for i, ln in enumerate(lines):
-                if ln.strip() == "":
-                    insert_at = i + 1
-                    break
-            new_lines = lines[:insert_at] + [""] + today_block.splitlines() + [""] + lines[insert_at:]
-            new_content = "\\n".join(new_lines).strip() + "\\n"
-        else:
-            new_content = today_block + "\\n" + original
+        pattern = re.compile(re.escape(begin) + r".*?" + re.escape(end), re.DOTALL)
+        replacement = f"{begin}\n{today_block}\n{end}"
+        original = pattern.sub(replacement, original)
 
     with open(README_PATH, "w", encoding="utf-8") as f:
-        f.write(new_content)
+        f.write(original)
+
 
 
 def main() -> None:
