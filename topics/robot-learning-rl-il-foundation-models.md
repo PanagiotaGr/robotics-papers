@@ -1,111 +1,111 @@
 # Robot Learning (RL, IL, Foundation Models)
 
-**Last update:** 2026-01-14
+**Last update:** 2026-01-15
 
 > Auto-generated. Edit `config.yml` to change keywords/topics.
 
 ## Latest
 
-- **VeriTaS: The First Dynamic Benchmark for Multimodal Automated Fact-Checking**
-  - Authors: Mark Rothermel, Marcus Kornmann, Marcus Rohrbach, Anna Rohrbach
-  - Published: 2026-01-13 | Category: `cs.IR`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08611v1) | [PDF](https://arxiv.org/pdf/2601.08611v1)
-  - Matched: foundation model, llm
-- **Learner-Tailored Program Repair: A Solution Generator with Iterative Edit-Driven Retrieval Enhancement**
-  - Authors: Zhenlong Dai, Zhuoluo Zhao, Hengning Wang, Xiu Tang, Sai Wu, Chang Yao, Zhipeng Gao, Jingyuan Chen
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08545v1) | [PDF](https://arxiv.org/pdf/2601.08545v1)
-  - Matched: llm
-- **Your Group-Relative Advantage Is Biased**
-  - Authors: Fengkai Yang, Zherui Chen, Xiaohan Wang, Xiaodong Lu, Jiajun Chai, Guojun Yin, Wei Lin, Shuai Ma et al.
-  - Published: 2026-01-13 | Category: `cs.LG`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08521v1) | [PDF](https://arxiv.org/pdf/2601.08521v1)
-  - Matched: reinforcement learning
-- **Closed-Loop LLM Discovery of Non-Standard Channel Priors in Vision Models**
-  - Authors: Tolgay Atinc Uzun, Dmitry Ignatov, Radu Timofte
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08517v1) | [PDF](https://arxiv.org/pdf/2601.08517v1)
-  - Matched: llm
-- **STAR: Detecting Inference-time Backdoors in LLM Reasoning via State-Transition Amplification Ratio**
-  - Authors: Seong-Gyu Park, Sohee Park, Jisu Lee, Hyunsik Na, Daeseon Choi
-  - Published: 2026-01-13 | Category: `cs.CL`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08511v1) | [PDF](https://arxiv.org/pdf/2601.08511v1)
-  - Matched: llm
-- **What If TSF: A Benchmark for Reframing Forecasting as Scenario-Guided Multimodal Forecasting**
-  - Authors: Jinkwan Jang, Hyunbin Jin, Hyungjin Park, Kyubyung Chae, Taesup Kim
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08509v1) | [PDF](https://arxiv.org/pdf/2601.08509v1)
-  - Matched: llm
-- **AUV Trajectory Learning for Underwater Acoustic Energy Transfer and Age Minimization**
-  - Authors: Mohamed Afouene Melki, Mohammad Shehab, Mohamed-Slim Alouini
-  - Published: 2026-01-13 | Category: `cs.RO`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08491v1) | [PDF](https://arxiv.org/pdf/2601.08491v1)
-  - Matched: reinforcement learning, llm
-- **JudgeRLVR: Judge First, Generate Second for Efficient Reasoning**
-  - Authors: Jiangshan Duo, Hanyu Li, Hailin Zhang, Yudong Wang, Sujian Li, Liang Zhao
-  - Published: 2026-01-13 | Category: `cs.CL`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08468v1) | [PDF](https://arxiv.org/pdf/2601.08468v1)
-  - Matched: reinforcement learning
-- **Beyond Linearization: Attributed Table Graphs for Table Reasoning**
-  - Authors: Yuxiang Wang, Junhao Gan, Shengxiang Gao, Shenghao Ye, Zhengyi Yang, Jianzhong Qi
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08444v1) | [PDF](https://arxiv.org/pdf/2601.08444v1)
-  - Matched: llm
-- **Incentivizing Cardiologist-Like Reasoning in MLLMs for Interpretable Echocardiographic Diagnosis**
-  - Authors: Yi Qin, Lehan Wang, Chenxu Zhao, Alex P. W. Lee, Xiaomeng Li
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08440v1) | [PDF](https://arxiv.org/pdf/2601.08440v1)
-  - Matched: reinforcement learning, foundation model, llm
-- **RubricHub: A Comprehensive and Highly Discriminative Rubric Dataset via Automated Coarse-to-Fine Generation**
-  - Authors: Sunzhu Li, Jiale Zhao, Miteto Wei, Huimin Ren, Yang Zhou, Jingwen Yang, Shunyu Liu, Kaike Zhang et al.
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08430v1) | [PDF](https://arxiv.org/pdf/2601.08430v1)
-  - Matched: reinforcement learning
-- **Silence the Judge: Reinforcement Learning with Self-Verifier via Latent Geometric Clustering**
-  - Authors: Nonghai Zhang, Weitao Ma, Zhanyu Ma, Jun Xu, Jiuchong Gao, Jinghua Hao, Renqing He, Jingwen Xu
-  - Published: 2026-01-13 | Category: `cs.CL`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08427v1) | [PDF](https://arxiv.org/pdf/2601.08427v1)
-  - Matched: reinforcement learning, llm
-- **Taxon: Hierarchical Tax Code Prediction with Semantically Aligned LLM Expert Guidance**
-  - Authors: Jihang Li, Qing Liu, Zulong Chen, Jing Wang, Wei Wang, Chuanfei Xu, Zeyi Wen
-  - Published: 2026-01-13 | Category: `cs.LG`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08418v1) | [PDF](https://arxiv.org/pdf/2601.08418v1)
-  - Matched: llm
-- **Regulatory gray areas of LLM Terms**
-  - Authors: Brittany I. Davidson, Kate Muir, Florian A. D. Burnat, Adam N. Joinson
-  - Published: 2026-01-13 | Category: `cs.CY`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08415v1) | [PDF](https://arxiv.org/pdf/2601.08415v1)
-  - Matched: llm
-- **Owen-Shapley Policy Optimization (OSPO): A Principled RL Algorithm for Generative Search LLMs**
-  - Authors: Abhijnan Nath, Alireza Bagheri Garakani, Tianchen Zhou, Fan Yang, Nikhil Krishnaswamy
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08403v1) | [PDF](https://arxiv.org/pdf/2601.08403v1)
-  - Matched: reinforcement learning, llm
-- **Controlled LLM Training on Spectral Sphere**
-  - Authors: Tian Xie, Haoming Luo, Haoyu Tang, Yiwen Hu, Jason Klein Liu, Qingnan Ren, Yang Wang, Wayne Xin Zhao et al.
-  - Published: 2026-01-13 | Category: `cs.LG`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08393v1) | [PDF](https://arxiv.org/pdf/2601.08393v1)
-  - Matched: llm
-- **Semantic Laundering in AI Agent Architectures: Why Tool Boundaries Do Not Confer Epistemic Warrant**
-  - Authors: Oleg Romanchuk, Roman Bondar
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08333v1) | [PDF](https://arxiv.org/pdf/2601.08333v1)
-  - Matched: llm
-- **ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation**
-  - Authors: Zhenyang Liu, Yongchong Gu, Yikai Wang, Xiangyang Xue, Yanwei Fu
-  - Published: 2026-01-13 | Category: `cs.RO`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08325v1) | [PDF](https://arxiv.org/pdf/2601.08325v1)
+- **Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning**
+  - Authors: Chi-Pin Huang, Yunze Man, Zhiding Yu, Min-Hung Chen, Jan Kautz, Yu-Chiang Frank Wang, Fu-En Yang
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09708v1) | [PDF](https://arxiv.org/pdf/2601.09708v1)
   - Matched: vision-language-action, vla
-- **AtomMem : Learnable Dynamic Agentic Memory with Atomic Memory Operation**
-  - Authors: Yupeng Huo, Yaxi Lu, Zhong Zhang, Haotian Chen, Yankai Lin
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08323v1) | [PDF](https://arxiv.org/pdf/2601.08323v1)
-  - Matched: reinforcement learning
-- **ORBIT: On-policy Exploration-Exploitation for Controllable Multi-Budget Reasoning**
-  - Authors: Kun Liang, Clive Bai, Xin Xu, Chenming Tang, Sanwoo Lee, Weijie Liu, Saiyong Yang, Yunfang Wu
-  - Published: 2026-01-13 | Category: `cs.LG`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08310v1) | [PDF](https://arxiv.org/pdf/2601.08310v1)
-  - Matched: reinforcement learning
+- **ShortCoder: Knowledge-Augmented Syntax Optimization for Token-Efficient Code Generation**
+  - Authors: Sicong Liu, Yanxian Huang, Mingwei Liu, Jiachi Chen, Ensheng Shi, Yuchi Ma, Hongyu Zhang, Yin Zhang et al.
+  - Published: 2026-01-14 | Category: `cs.SE`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09703v1) | [PDF](https://arxiv.org/pdf/2601.09703v1)
+  - Matched: llm
+- **LLMs can Compress LLMs: Adaptive Pruning by Agents**
+  - Authors: Sai Varun Kodathala, Rakesh Vunnam
+  - Published: 2026-01-14 | Category: `cs.CL`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09694v1) | [PDF](https://arxiv.org/pdf/2601.09694v1)
+  - Matched: foundation model, llm
+- **Contrastive Geometric Learning Unlocks Unified Structure- and Ligand-Based Drug Design**
+  - Authors: Lisa Schneckenreiter, Sohvi Luukkonen, Lukas Friedrich, Daniel Kuhn, Günter Klambauer
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09693v1) | [PDF](https://arxiv.org/pdf/2601.09693v1)
+  - Matched: foundation model
+- **Routing with Generated Data: Annotation-Free LLM Skill Estimation and Expert Selection**
+  - Authors: Tianyi Niu, Justin Chih-Yao Chen, Genta Indra Winata, Shi-Xiong Zhang, Supriyo Chakraborty, Sambit Sahu, Yue Zhang, Elias Stengel-Eskin et al.
+  - Published: 2026-01-14 | Category: `cs.CL`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09692v1) | [PDF](https://arxiv.org/pdf/2601.09692v1)
+  - Matched: llm
+- **Disentangling Task Conflicts in Multi-Task LoRA via Orthogonal Gradient Projection**
+  - Authors: Ziyu Yang, Guibin Chen, Yuxin Yang, Aoxiong Zeng, Xiangquan Yang
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09684v1) | [PDF](https://arxiv.org/pdf/2601.09684v1)
+  - Matched: llm
+- **STEP3-VL-10B Technical Report**
+  - Authors: Ailin Huang, Chengyuan Yao, Chunrui Han, Fanqi Wan, Hangyu Guo, Haoran Lv, Hongyu Zhou, Jia Wang et al.
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09668v1) | [PDF](https://arxiv.org/pdf/2601.09668v1)
+  - Matched: reinforcement learning, foundation model
+- **Collaborative Multi-Agent Test-Time Reinforcement Learning for Reasoning**
+  - Authors: Zhiyuan Hu, Yunhai Hu, Juncheng Liu, Shuyue Stella Li, Yucheng Wang, Zhen Xu, See-Kiong Ng, Anh Tuan Luu et al.
+  - Published: 2026-01-14 | Category: `cs.AI`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09667v1) | [PDF](https://arxiv.org/pdf/2601.09667v1)
+  - Matched: reinforcement learning, llm
+- **Exploring Fine-Tuning for Tabular Foundation Models**
+  - Authors: Aditya Tanna, Pratinav Seth, Mohamed Bouadi, Vinay Kumar Sankarapu
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09654v1) | [PDF](https://arxiv.org/pdf/2601.09654v1)
+  - Matched: foundation model
+- **From Prompt to Protocol: Fast Charging Batteries with Large Language Models**
+  - Authors: Ge Lei, Ferran Brosa Planella, Sterling G. Baird, Samuel J. Cooper
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09626v1) | [PDF](https://arxiv.org/pdf/2601.09626v1)
+  - Matched: llm
+- **DPWriter: Reinforcement Learning with Diverse Planning Branching for Creative Writing**
+  - Authors: Qian Cao, Yahui Liu, Wei Bi, Yi Zhao, Ruihua Song, Xiting Wang, Ruiming Tang, Guorui Zhou et al.
+  - Published: 2026-01-14 | Category: `cs.CL`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09609v1) | [PDF](https://arxiv.org/pdf/2601.09609v1)
+  - Matched: reinforcement learning, llm
+- **Linear Complexity Self-Supervised Learning for Music Understanding with Random Quantizer**
+  - Authors: Petros Vavaroutsos, Theodoros Palamas, Pantelis Vikatos
+  - Published: 2026-01-14 | Category: `cs.SD`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09603v1) | [PDF](https://arxiv.org/pdf/2601.09603v1)
+  - Matched: foundation model
+- **OpenVoxel: Training-Free Grouping and Captioning Voxels for Open-Vocabulary 3D Scene Understanding**
+  - Authors: Sheng-Yu Huang, Jaesung Choe, Yu-Chiang Frank Wang, Cheng Sun
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09575v1) | [PDF](https://arxiv.org/pdf/2601.09575v1)
+  - Matched: llm
+- **Benchmarking Post-Training Quantization of Large Language Models under Microscaling Floating Point Formats**
+  - Authors: Manyi Zhang, Ji-Fu Li, Zhongao Sun, Haoli Bai, Hui-Ling Zhen, Zhenhua Dong, Xianzhi Yu
+  - Published: 2026-01-14 | Category: `cs.CL`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09555v1) | [PDF](https://arxiv.org/pdf/2601.09555v1)
+  - Matched: llm
+- **Omni-R1: Towards the Unified Generative Paradigm for Multimodal Reasoning**
+  - Authors: Dongjie Cheng, Yongqi Li, Zhixin Ma, Hongru Cai, Yupeng Hu, Wenjie Wang, Liqiang Nie, Wenjie Li
+  - Published: 2026-01-14 | Category: `cs.AI`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09536v1) | [PDF](https://arxiv.org/pdf/2601.09536v1)
+  - Matched: llm
+- **Private LLM Inference on Consumer Blackwell GPUs: A Practical Guide for Cost-Effective Local Deployment in SMEs**
+  - Authors: Jonathan Knoop, Hendrik Holtmann
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09527v1) | [PDF](https://arxiv.org/pdf/2601.09527v1)
+  - Matched: llm
+- **CLARE: Continual Learning for Vision-Language-Action Models via Autonomous Adapter Routing and Expansion**
+  - Authors: Ralf Römer, Yi Zhang, Angela P. Schoellig
+  - Published: 2026-01-14 | Category: `cs.RO`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09512v1) | [PDF](https://arxiv.org/pdf/2601.09512v1)
+  - Matched: vision-language-action, vla
+- **What Do LLM Agents Know About Their World? Task2Quiz: A Paradigm for Studying Environment Understanding**
+  - Authors: Siyuan Liu, Hongbang Yuan, Xinze Li, Ziyue Zhu, Yixin Cao, Yu-Gang Jiang
+  - Published: 2026-01-14 | Category: `cs.AI`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09503v1) | [PDF](https://arxiv.org/pdf/2601.09503v1)
+  - Matched: llm
+- **Bridging Semantic Understanding and Popularity Bias with LLMs**
+  - Authors: Renqiang Luo, Dong Zhang, Yupeng Gao, Wen Shi, Mingliang Hou, Jiaying Liu, Zhe Wang, Shuo Yu
+  - Published: 2026-01-14 | Category: `cs.IR`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09478v1) | [PDF](https://arxiv.org/pdf/2601.09478v1)
+  - Matched: llm
+- **SimMerge: Learning to Select Merge Operators from Similarity Signals**
+  - Authors: Oliver Bolton, Aakanksha, Arash Ahmadian, Sara Hooker, Marzieh Fadaee, Beyza Ermis
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09473v1) | [PDF](https://arxiv.org/pdf/2601.09473v1)
+  - Matched: llm
 
 ---
 

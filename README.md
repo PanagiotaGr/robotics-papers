@@ -27,8 +27,8 @@ This repo updates automatically via GitHub Actions.
 <!-- BEGIN TODAY -->
 ## ✅ Today
 
-**Last update:** 2026-01-14  
-**Daily archive:** `digests/2026-01-14.md`  
+**Last update:** 2026-01-15  
+**Daily archive:** `digests/2026-01-15.md`  
 
 _Auto-generated. Edit `config.yml` to change topics/keywords._
 
@@ -46,117 +46,177 @@ _Auto-generated. Edit `config.yml` to change topics/keywords._
 
 ### Autonomous Driving & AV
 
-_No matches today._
+- **SCE-SLAM: Scale-Consistent Monocular SLAM via Scene Coordinate Embeddings**
+  - Authors: Yuchen Wu, Jiahe Li, Xiaohan Yu, Lina Yu, Jin Zheng, Xiao Bai
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09665v1) | [PDF](https://arxiv.org/pdf/2601.09665v1)
+  - Matched: waymo, kitti
+- **Terminally constrained flow-based generative models from an optimal control perspective**
+  - Authors: Weiguo Gao, Ming Li, Qianxiao Li
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09474v1) | [PDF](https://arxiv.org/pdf/2601.09474v1)
+  - Matched: trajectory planning
+- **MAD: Motion Appearance Decoupling for efficient Driving World Models**
+  - Authors: Ahmad Rahimi, Valentin Gerard, Eloi Zablocki, Matthieu Cord, Alexandre Alahi
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09452v1) | [PDF](https://arxiv.org/pdf/2601.09452v1)
+  - Matched: autonomous driving
+- _(See full topic page: [Autonomous Driving & AV](topics/autonomous-driving-av.md))_
 
 
 ### Drones & Aerial Robotics
 
-- **On the use of graph models to achieve individual and group fairness**
-  - Authors: Arturo Pérez-Peralta, Sandra Benítez-Peña, Rosa E. Lillo
-  - Published: 2026-01-13 | Category: `stat.ML`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08784v1) | [PDF](https://arxiv.org/pdf/2601.08784v1)
+- **SAM3-DMS: Decoupled Memory Selection for Multi-target Video Segmentation of SAM3**
+  - Authors: Ruiqi Shen, Chang Liu, Henghui Ding
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09699v1) | [PDF](https://arxiv.org/pdf/2601.09699v1)
   - Matched: imu
-- **Adaptive Requesting in Decentralized Edge Networks via Non-Stationary Bandits**
-  - Authors: Yi Zhuang, Kun Yang, Xingran Chen
-  - Published: 2026-01-13 | Category: `cs.LG`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08760v1) | [PDF](https://arxiv.org/pdf/2601.08760v1)
+- **LARGE: A Locally Adaptive Regularization Approach for Estimating Gaussian Graphical Models**
+  - Authors: Ha Nguyen, Sumanta Basu
+  - Published: 2026-01-14 | Category: `stat.ME`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09686v1) | [PDF](https://arxiv.org/pdf/2601.09686v1)
   - Matched: imu
-- **A Hybrid Model-based and Data-based Approach Developed for a Prosthetic Hand Wrist**
-  - Authors: Shifa Sulaiman, Francesco Schetter, Mehul Menon, Fanny Ficuciello
-  - Published: 2026-01-13 | Category: `cs.RO`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08711v1) | [PDF](https://arxiv.org/pdf/2601.08711v1)
+- **Image2Garment: Simulation-ready Garment Generation from a Single Image**
+  - Authors: Selim Emir Can, Jan Ackermann, Kiyohiro Nakayama, Ruofan Liu, Tong Wu, Yang Zheng, Hugo Bertiche, Menglei Chai et al.
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09658v1) | [PDF](https://arxiv.org/pdf/2601.09658v1)
   - Matched: imu
 - _(See full topic page: [Drones & Aerial Robotics](topics/drones-aerial-robotics.md))_
 
 
 ### SLAM, Localization & Mapping
 
-- **From Antenna Abundance to Antenna Intelligence in 6G Gigantic MIMO Systems**
-  - Authors: Emil Björnson, Amna Irshad, Özlem Tugfe Demir, Giuseppe Thadeu Freitas de Abreu, Alva Kosasih, Vitaly Petrov
-  - Published: 2026-01-13 | Category: `cs.IT`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08326v1) | [PDF](https://arxiv.org/pdf/2601.08326v1)
+- **Multimodal Signal Processing For Thermo-Visible-Lidar Fusion In Real-time 3D Semantic Mapping**
+  - Authors: Jiajun Sun, Yangyi Ou, Haoyuan Zheng, Chao yang, Yue Ma
+  - Published: 2026-01-14 | Category: `cs.RO`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09578v1) | [PDF](https://arxiv.org/pdf/2601.09578v1)
+  - Matched: slam, mapping
+- **Video-MSR: Benchmarking Multi-hop Spatial Reasoning Capabilities of MLLMs**
+  - Authors: Rui Zhu, Xin Shen, Shuchen Wu, Chenxi Miao, Xin Yu, Yang Li, Weikang Li, Deguo Xia et al.
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09430v1) | [PDF](https://arxiv.org/pdf/2601.09430v1)
   - Matched: localization
-- **Hyperbolic Heterogeneous Graph Transformer**
-  - Authors: Jongmin Park, Seunghoon Han, Hyewon Lee, Won-Yong Shin, Sungsu Lim
-  - Published: 2026-01-13 | Category: `cs.LG`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08251v1) | [PDF](https://arxiv.org/pdf/2601.08251v1)
-  - Matched: mapping
-- **Training Free Zero-Shot Visual Anomaly Localization via Diffusion Inversion**
-  - Authors: Samet Hicsonmez, Abd El Rahman Shabayek, Djamila Aouada
-  - Published: 2026-01-12 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08022v1) | [PDF](https://arxiv.org/pdf/2601.08022v1)
+- **Ability Transfer and Recovery via Modularized Parameters Localization**
+  - Authors: Songyao Jin, Kun Zhou, Wenqi Li, Peng Wang, Biwei Huang
+  - Published: 2026-01-14 | Category: `cs.CL`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09398v1) | [PDF](https://arxiv.org/pdf/2601.09398v1)
   - Matched: localization
 - _(See full topic page: [SLAM, Localization & Mapping](topics/slam-localization-mapping.md))_
 
 
 ### Navigation, Planning & Control
 
-- **MPCI-Bench: A Benchmark for Multimodal Pairwise Contextual Integrity Evaluation of Language Model Agents**
-  - Authors: Shouju Wang, Haopeng Zhang
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08235v1) | [PDF](https://arxiv.org/pdf/2601.08235v1)
+- **SoK: Enhancing Cryptographic Collaborative Learning with Differential Privacy**
+  - Authors: Francesco Capano, Jonas Böhler, Benjamin Weggenmann
+  - Published: 2026-01-14 | Category: `cs.CR`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09460v1) | [PDF](https://arxiv.org/pdf/2601.09460v1)
   - Matched: mpc
+- **Feedback-Based Mobile Robot Navigation in 3-D Environments Using Artificial Potential Functions Technical Report**
+  - Authors: Ro'i Lang, Elon Rimon
+  - Published: 2026-01-14 | Category: `cs.RO`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09318v1) | [PDF](https://arxiv.org/pdf/2601.09318v1)
+  - Matched: navigation, motion planning
+- **Towards Open Environments and Instructions: General Vision-Language Navigation via Fast-Slow Interactive Reasoning**
+  - Authors: Yang Li, Aming Wu, Zihao Zhang, Yahong Han
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09111v1) | [PDF](https://arxiv.org/pdf/2601.09111v1)
+  - Matched: navigation
 - _(See full topic page: [Navigation, Planning & Control](topics/navigation-planning-control.md))_
 
 
 ### Manipulation & Grasping
 
-_No matches today._
+- **Explainable Autoencoder-Based Anomaly Detection in IEC 61850 GOOSE Networks**
+  - Authors: Dafne Lozano-Paredes, Luis Bote-Curiel, Juan Ramón Feijóo-Martínez, Ismael Gómez-Talal, José Luis Rojo-Álvarez
+  - Published: 2026-01-14 | Category: `cs.CR`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09287v1) | [PDF](https://arxiv.org/pdf/2601.09287v1)
+  - Matched: manipulation
+- **Design Methodology of Hydraulically-driven Soft Robotic Gripper for a Large and Heavy Object**
+  - Authors: Ko Yamamoto, Kyosuke Ishibashi, Hiroki Ishikawa, Osamu Azami
+  - Published: 2026-01-14 | Category: `cs.RO`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09104v1) | [PDF](https://arxiv.org/pdf/2601.09104v1)
+  - Matched: grasp, grasping
+- _(See full topic page: [Manipulation & Grasping](topics/manipulation-grasping.md))_
 
 
 ### Robot Learning (RL, IL, Foundation Models)
 
-- **VeriTaS: The First Dynamic Benchmark for Multimodal Automated Fact-Checking**
-  - Authors: Mark Rothermel, Marcus Kornmann, Marcus Rohrbach, Anna Rohrbach
-  - Published: 2026-01-13 | Category: `cs.IR`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08611v1) | [PDF](https://arxiv.org/pdf/2601.08611v1)
-  - Matched: foundation model, llm
-- **Learner-Tailored Program Repair: A Solution Generator with Iterative Edit-Driven Retrieval Enhancement**
-  - Authors: Zhenlong Dai, Zhuoluo Zhao, Hengning Wang, Xiu Tang, Sai Wu, Chang Yao, Zhipeng Gao, Jingyuan Chen
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08545v1) | [PDF](https://arxiv.org/pdf/2601.08545v1)
+- **Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning**
+  - Authors: Chi-Pin Huang, Yunze Man, Zhiding Yu, Min-Hung Chen, Jan Kautz, Yu-Chiang Frank Wang, Fu-En Yang
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09708v1) | [PDF](https://arxiv.org/pdf/2601.09708v1)
+  - Matched: vision-language-action, vla
+- **ShortCoder: Knowledge-Augmented Syntax Optimization for Token-Efficient Code Generation**
+  - Authors: Sicong Liu, Yanxian Huang, Mingwei Liu, Jiachi Chen, Ensheng Shi, Yuchi Ma, Hongyu Zhang, Yin Zhang et al.
+  - Published: 2026-01-14 | Category: `cs.SE`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09703v1) | [PDF](https://arxiv.org/pdf/2601.09703v1)
   - Matched: llm
-- **Your Group-Relative Advantage Is Biased**
-  - Authors: Fengkai Yang, Zherui Chen, Xiaohan Wang, Xiaodong Lu, Jiajun Chai, Guojun Yin, Wei Lin, Shuai Ma et al.
-  - Published: 2026-01-13 | Category: `cs.LG`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08521v1) | [PDF](https://arxiv.org/pdf/2601.08521v1)
-  - Matched: reinforcement learning
+- **LLMs can Compress LLMs: Adaptive Pruning by Agents**
+  - Authors: Sai Varun Kodathala, Rakesh Vunnam
+  - Published: 2026-01-14 | Category: `cs.CL`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09694v1) | [PDF](https://arxiv.org/pdf/2601.09694v1)
+  - Matched: foundation model, llm
 - _(See full topic page: [Robot Learning (RL, IL, Foundation Models)](topics/robot-learning-rl-il-foundation-models.md))_
 
 
 ### Multi-Robot & Swarms
 
-- **One-Shot Federated Ridge Regression: Exact Recovery via Sufficient Statistic Aggregation**
-  - Authors: Zahir Alsulaimawi
-  - Published: 2026-01-13 | Category: `cs.LG`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08216v1) | [PDF](https://arxiv.org/pdf/2601.08216v1)
+- **A Hybrid Machine Learning Framework for Improved Short-Term Peak-Flow Forecasting**
+  - Authors: Gabriele Bertoli, Kai Schroeter, Rossella Arcucci, Enrica Caporali
+  - Published: 2026-01-14 | Category: `eess.SP`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09336v1) | [PDF](https://arxiv.org/pdf/2601.09336v1)
+  - Matched: coordination
+- **High-Performance Serverless Computing: A Systematic Literature Review on Serverless for HPC, AI, and Big Data**
+  - Authors: Valerio Besozzi, Matteo Della Bartola, Patrizio Dazzi, Marco Danelutto
+  - Published: 2026-01-14 | Category: `cs.DC`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09334v1) | [PDF](https://arxiv.org/pdf/2601.09334v1)
+  - Matched: distributed
+- **Single-Round Clustered Federated Learning via Data Collaboration Analysis for Non-IID Data**
+  - Authors: Sota Sugawara, Yuji Kawamata, Akihiro Toyoda, Tomoru Nakayama, Yukihiko Okada
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09304v1) | [PDF](https://arxiv.org/pdf/2601.09304v1)
   - Matched: distributed
 - _(See full topic page: [Multi-Robot & Swarms](topics/multi-robot-swarms.md))_
 
 
 ### Safety, Robustness, Uncertainty
 
-- **Developing Predictive and Robust Radiomics Models for Chemotherapy Response in High-Grade Serous Ovarian Carcinoma**
-  - Authors: Sepideh Hatamikia, Geevarghese George, Florian Schwarzhans, Amirreza Mahbod, Marika AV Reinius, Ali Abbasian Ardakani, Mercedes Jimenez-Linan, Satish Viswanath et al.
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08455v1) | [PDF](https://arxiv.org/pdf/2601.08455v1)
+- **Value-Aware Numerical Representations for Transformer Language Models**
+  - Authors: Andreea Dutulescu, Stefan Ruseti, Mihai Dascalu
+  - Published: 2026-01-14 | Category: `cs.CL`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09706v1) | [PDF](https://arxiv.org/pdf/2601.09706v1)
   - Matched: robustness
-- **YaPO: Learnable Sparse Activation Steering Vectors for Domain Adaptation**
-  - Authors: Abdelaziz Bounhar, Rania Hossam Elmohamady Elbadry, Hadi Abdine, Preslav Nakov, Michalis Vazirgiannis, Guokan Shang
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08441v1) | [PDF](https://arxiv.org/pdf/2601.08441v1)
-  - Matched: safety, safe
-- **Bio-RV: Low-Power Resource-Efficient RISC-V Processor for Biomedical Applications**
-  - Authors: Vijay Pratap Sharma, Annu Kumar, Mohd Faisal Khan, Mukul Lokhande, Santosh Kumar Vishvakarma
-  - Published: 2026-01-13 | Category: `eess.SP`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08428v1) | [PDF](https://arxiv.org/pdf/2601.08428v1)
+- **Evaluating GAN-LSTM for Smart Meter Anomaly Detection in Power Systems**
+  - Authors: Fahimeh Orvati Nia, Shima Salehi, Joshua Peeples
+  - Published: 2026-01-14 | Category: `eess.SP`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09701v1) | [PDF](https://arxiv.org/pdf/2601.09701v1)
+  - Matched: adversarial, anomaly detection
+- **The Promptware Kill Chain: How Prompt Injections Gradually Evolved Into a Multi-Step Malware**
+  - Authors: Ben Nassi, Bruce Schneier, Oleg Brodt
+  - Published: 2026-01-14 | Category: `cs.CR`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09625v1) | [PDF](https://arxiv.org/pdf/2601.09625v1)
   - Matched: safety, safe
 - _(See full topic page: [Safety, Robustness, Uncertainty](topics/safety-robustness-uncertainty.md))_
 
 
 ### 3D Gaussian Splatting & Neural Rendering (Robotics)
 
-_No matches today._
+- **Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering**
+  - Authors: Jieying Chen, Jeffrey Hu, Joan Lasenby, Ayush Tewari
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09697v1) | [PDF](https://arxiv.org/pdf/2601.09697v1)
+  - Matched: 3d reconstruction
+- **V-DPM: 4D Video Reconstruction with Dynamic Point Maps**
+  - Authors: Edgar Sucar, Eldar Insafutdinov, Zihang Lai, Andrea Vedaldi
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09499v1) | [PDF](https://arxiv.org/pdf/2601.09499v1)
+  - Matched: 3d reconstruction
+- **GaussianFluent: Gaussian Simulation for Dynamic Scenes with Mixed Materials**
+  - Authors: Bei Huang, Yixin Chen, Ruijie Lu, Gang Zeng, Hongbin Zha, Yuru Pei, Siyuan Huang
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09265v1) | [PDF](https://arxiv.org/pdf/2601.09265v1)
+  - Matched: gaussian splatting, 3d gaussian splatting, 3dgs
+- _(See full topic page: [3D Gaussian Splatting & Neural Rendering (Robotics)](topics/3d-gaussian-splatting-neural-rendering-robotics.md))_
 <!-- END TODAY -->
 
 ---

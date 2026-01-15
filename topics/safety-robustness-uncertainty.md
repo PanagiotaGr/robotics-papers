@@ -1,111 +1,111 @@
 # Safety, Robustness, Uncertainty
 
-**Last update:** 2026-01-14
+**Last update:** 2026-01-15
 
 > Auto-generated. Edit `config.yml` to change keywords/topics.
 
 ## Latest
 
-- **Developing Predictive and Robust Radiomics Models for Chemotherapy Response in High-Grade Serous Ovarian Carcinoma**
-  - Authors: Sepideh Hatamikia, Geevarghese George, Florian Schwarzhans, Amirreza Mahbod, Marika AV Reinius, Ali Abbasian Ardakani, Mercedes Jimenez-Linan, Satish Viswanath et al.
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08455v1) | [PDF](https://arxiv.org/pdf/2601.08455v1)
+- **Value-Aware Numerical Representations for Transformer Language Models**
+  - Authors: Andreea Dutulescu, Stefan Ruseti, Mihai Dascalu
+  - Published: 2026-01-14 | Category: `cs.CL`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09706v1) | [PDF](https://arxiv.org/pdf/2601.09706v1)
   - Matched: robustness
-- **YaPO: Learnable Sparse Activation Steering Vectors for Domain Adaptation**
-  - Authors: Abdelaziz Bounhar, Rania Hossam Elmohamady Elbadry, Hadi Abdine, Preslav Nakov, Michalis Vazirgiannis, Guokan Shang
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08441v1) | [PDF](https://arxiv.org/pdf/2601.08441v1)
+- **Evaluating GAN-LSTM for Smart Meter Anomaly Detection in Power Systems**
+  - Authors: Fahimeh Orvati Nia, Shima Salehi, Joshua Peeples
+  - Published: 2026-01-14 | Category: `eess.SP`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09701v1) | [PDF](https://arxiv.org/pdf/2601.09701v1)
+  - Matched: adversarial, anomaly detection
+- **The Promptware Kill Chain: How Prompt Injections Gradually Evolved Into a Multi-Step Malware**
+  - Authors: Ben Nassi, Bruce Schneier, Oleg Brodt
+  - Published: 2026-01-14 | Category: `cs.CR`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09625v1) | [PDF](https://arxiv.org/pdf/2601.09625v1)
   - Matched: safety, safe
-- **Bio-RV: Low-Power Resource-Efficient RISC-V Processor for Biomedical Applications**
-  - Authors: Vijay Pratap Sharma, Annu Kumar, Mohd Faisal Khan, Mukul Lokhande, Santosh Kumar Vishvakarma
-  - Published: 2026-01-13 | Category: `eess.SP`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08428v1) | [PDF](https://arxiv.org/pdf/2601.08428v1)
+- **CogRail: Benchmarking VLMs in Cognitive Intrusion Perception for Intelligent Railway Transportation Systems**
+  - Authors: Yonglin Tian, Qiyao Zhang, Wei Xu, Yutong Wang, Yihao Wu, Xinyi Li, Xingyuan Dai, Hui Zhang et al.
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09613v1) | [PDF](https://arxiv.org/pdf/2601.09613v1)
   - Matched: safety, safe
-- **SPARK: Scalable Real-Time Point Cloud Aggregation with Multi-View Self-Calibration**
-  - Authors: Chentian Sun
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08414v1) | [PDF](https://arxiv.org/pdf/2601.08414v1)
-  - Matched: uncertainty, calibration
-- **Semantic Misalignment in Vision-Language Models under Perceptual Degradation**
-  - Authors: Guo Cheng
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08355v1) | [PDF](https://arxiv.org/pdf/2601.08355v1)
-  - Matched: safety, safe, uncertainty, robustness
-- **MLPlatt: Simple Calibration Framework for Ranking Models**
-  - Authors: Piotr Bajger, Roman Dusek, Krzysztof Galias, Paweł Młyniec, Aleksander Wawer, Paweł Zawistowski
-  - Published: 2026-01-13 | Category: `cs.IR`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08345v1) | [PDF](https://arxiv.org/pdf/2601.08345v1)
-  - Matched: calibration
-- **IGAN: A New Inception-based Model for Stable and High-Fidelity Image Synthesis Using Generative Adversarial Networks**
-  - Authors: Ahmed A. Hashim, Ali Al-Shuwaili, Asraa Saeed, Ali Al-Bayaty
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08332v1) | [PDF](https://arxiv.org/pdf/2601.08332v1)
-  - Matched: adversarial
-- **Safe Heterogeneous Multi-Agent RL with Communication Regularization for Coordinated Target Acquisition**
-  - Authors: Gabriele Calzolari, Vidya Sumathy, Christoforos Kanellakis, George Nikolakopoulos
-  - Published: 2026-01-13 | Category: `cs.RO`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08327v1) | [PDF](https://arxiv.org/pdf/2601.08327v1)
+- **Information Access of the Oppressed: A Problem-Posing Framework for Envisioning Emancipatory Information Access Platforms**
+  - Authors: Bhaskar Mitra, Nicola Neophytou, Sireesh Gururaja
+  - Published: 2026-01-14 | Category: `cs.CY`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09600v1) | [PDF](https://arxiv.org/pdf/2601.09600v1)
   - Matched: safety, safe
-- **YOLOBirDrone: Dataset for Bird vs Drone Detection and Classification and a YOLO based enhanced learning architecture**
-  - Authors: Dapinder Kaur, Neeraj Battish, Arnav Bhavsar, Shashi Poddar
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08319v1) | [PDF](https://arxiv.org/pdf/2601.08319v1)
+- **GlovEgo-HOI: Bridging the Synthetic-to-Real Gap for Industrial Egocentric Human-Object Interaction Detection**
+  - Authors: Alfio Spoto, Rosario Leonardi, Francesco Ragusa, Giovanni Maria Farinella
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09528v1) | [PDF](https://arxiv.org/pdf/2601.09528v1)
   - Matched: safety, safe
-- **Meta-Backscatter: Long-Distance Battery-Free Metamaterial-Backscatter Sensing and Communication**
-  - Authors: Taorui Liu, Xu Liu, Zhiquan Xu, Houfeng Chen, Hongliang Zhang, Lingyang Song
-  - Published: 2026-01-13 | Category: `eess.SP`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08307v1) | [PDF](https://arxiv.org/pdf/2601.08307v1)
-  - Matched: robustness
-- **AIMC-Spec: A Benchmark Dataset for Automatic Intrapulse Modulation Classification under Variable Noise Conditions**
-  - Authors: Sebastian L. Cocks, Salvador Dreo, Feras Dayoub
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08265v1) | [PDF](https://arxiv.org/pdf/2601.08265v1)
-  - Matched: robustness
-- **A Usable GAN-Based Tool for Synthetic ECG Generation in Cardiac Amyloidosis Research**
-  - Authors: Francesco Speziale, Ugo Lomoio, Fabiola Boccuto, Pierangelo Veltri, Pietro Hiram Guzzi
-  - Published: 2026-01-13 | Category: `cs.LG`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08260v1) | [PDF](https://arxiv.org/pdf/2601.08260v1)
-  - Matched: adversarial
-- **T3: Benchmarking Sycophancy and Skepticism in Causal Judgment**
-  - Authors: Edward Y. Chang
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08258v1) | [PDF](https://arxiv.org/pdf/2601.08258v1)
-  - Matched: safety, safe
-- **Improving Zero-shot ADL Recognition with Large Language Models through Event-based Context and Confidence**
-  - Authors: Michele Fiori, Gabriele Civitarese, Marco Colussi, Claudio Bettini
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08241v1) | [PDF](https://arxiv.org/pdf/2601.08241v1)
-  - Matched: safety, safe
-- **Evaluating Implicit Regulatory Compliance in LLM Tool Invocation via Logic-Guided Synthesis**
-  - Authors: Da Song, Yuheng Huang, Boqi Chen, Tianshuo Cong, Randy Goebel, Lei Ma, Foutse Khomh
-  - Published: 2026-01-13 | Category: `cs.CL`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08196v1) | [PDF](https://arxiv.org/pdf/2601.08196v1)
-  - Matched: safety, safe
-- **Route, Retrieve, Reflect, Repair: Self-Improving Agentic Framework for Visual Detection and Linguistic Reasoning in Medical Imaging**
-  - Authors: Md. Faiyaz Abdullah Sayeedi, Rashedur Rahman, Siam Tahsin Bhuiyan, Sefatul Wasi, Ashraful Islam, Saadia Binte Alam, AKM Mahbubur Rahman
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08192v1) | [PDF](https://arxiv.org/pdf/2601.08192v1)
-  - Matched: safety, safe
-- **ForgetMark: Stealthy Fingerprint Embedding via Targeted Unlearning in Language Models**
-  - Authors: Zhenhua Xu, Haobo Zhang, Zhebo Wang, Qichen Liu, Haitao Xu, Wenpeng Xing, Meng Han
-  - Published: 2026-01-13 | Category: `cs.CR`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08189v1) | [PDF](https://arxiv.org/pdf/2601.08189v1)
-  - Matched: robustness
-- **The Agent's First Day: Benchmarking Learning, Exploration, and Scheduling in the Workplace Scenarios**
-  - Authors: Daocheng Fu, Jianbiao Mei, Rong Wu, Xuemeng Yang, Jia Xu, Ding Wang, Pinlong Cai, Yong Liu et al.
-  - Published: 2026-01-13 | Category: `cs.AI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08173v1) | [PDF](https://arxiv.org/pdf/2601.08173v1)
-  - Matched: uncertainty, robustness
-- **Instance-Aligned Captions for Explainable Video Anomaly Detection**
-  - Authors: Inpyo Song, Minjun Joo, Joonhyung Kwon, Eunji Jeon, Jangwon Lee
-  - Published: 2026-01-13 | Category: `cs.CV`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08155v1) | [PDF](https://arxiv.org/pdf/2601.08155v1)
-  - Matched: safety, safe, anomaly detection
-- **Hierarchical Online-Scheduling for Energy-Efficient Split Inference with Progressive Transmission**
-  - Authors: Zengzipeng Tang, Yuxuan Sun, Wei Chen, Jianwen Ding, Bo Ai, Yulin Shao
-  - Published: 2026-01-13 | Category: `cs.NI`
-  - Links: [arXiv](https://arxiv.org/abs/2601.08135v1) | [PDF](https://arxiv.org/pdf/2601.08135v1)
+- **Class Adaptive Conformal Training**
+  - Authors: Badr-Eddine Marani, Julio Silva-Rodriguez, Ismail Ben Ayed, Maria Vakalopoulou, Stergios Christodoulidis, Jose Dolz
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09522v1) | [PDF](https://arxiv.org/pdf/2601.09522v1)
   - Matched: uncertainty
+- **FairGU: Fairness-aware Graph Unlearning in Social Network**
+  - Authors: Renqiang Luo, Yongshuai Yang, Huafei Huang, Qing Qing, Mingliang Hou, Ziqi Xu, Yi Yu, Jingjing Zhou et al.
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09469v1) | [PDF](https://arxiv.org/pdf/2601.09469v1)
+  - Matched: safe
+- **High-fidelity lunar topographic reconstruction across diverse terrain and illumination environments using deep learning**
+  - Authors: Hao Chen, Philipp Gläser, Konrad Willner, Jürgen Oberst
+  - Published: 2026-01-14 | Category: `astro-ph.EP`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09468v1) | [PDF](https://arxiv.org/pdf/2601.09468v1)
+  - Matched: robustness
+- **Monte-Carlo Tree Search with Neural Network Guidance for Lane-Free Autonomous Driving**
+  - Authors: Ioannis Peridis, Dimitrios Troullinos, Georgios Chalkiadakis, Pantelis Giankoulidis, Ioannis Papamichail, Markos Papageorgiou
+  - Published: 2026-01-14 | Category: `cs.AI`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09353v1) | [PDF](https://arxiv.org/pdf/2601.09353v1)
+  - Matched: safety, safe
+- **Blue Teaming Function-Calling Agents**
+  - Authors: Greta Dolcetti, Giulio Zizzo, Sergio Maffeis
+  - Published: 2026-01-14 | Category: `cs.CR`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09292v1) | [PDF](https://arxiv.org/pdf/2601.09292v1)
+  - Matched: safe, robustness
+- **STaR: Sensitive Trajectory Regulation for Unlearning in Large Reasoning Models**
+  - Authors: Jingjing Zhou, Gaoxiang Cong, Li Su, Liang Li
+  - Published: 2026-01-14 | Category: `cs.AI`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09281v1) | [PDF](https://arxiv.org/pdf/2601.09281v1)
+  - Matched: safety, safe
+- **BrainSegNet: A Novel Framework for Whole-Brain MRI Parcellation Enhanced by Large Models**
+  - Authors: Yucheng Li, Xiaofan Wang, Junyi Wang, Yijie Li, Xi Zhu, Mubai Du, Dian Sheng, Wei Zhang et al.
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09263v1) | [PDF](https://arxiv.org/pdf/2601.09263v1)
+  - Matched: robustness
+- **Vision-Conditioned Variational Bayesian Last Layer Dynamics Models**
+  - Authors: Paul Brunzema, Thomas Lew, Ray Zhang, Takeru Shirasawa, John Subosits, Marcus Greiff
+  - Published: 2026-01-14 | Category: `cs.RO`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09178v1) | [PDF](https://arxiv.org/pdf/2601.09178v1)
+  - Matched: safety, safe
+- **Geometric Stability: The Missing Axis of Representations**
+  - Authors: Prashant C. Raju
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09173v1) | [PDF](https://arxiv.org/pdf/2601.09173v1)
+  - Matched: safety, safe
+- **Multi-Teacher Ensemble Distillation: A Mathematical Framework for Probability-Domain Knowledge Aggregation**
+  - Authors: Aaron R. Flouro, Shawn P. Chadwick
+  - Published: 2026-01-14 | Category: `cs.LG`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09165v1) | [PDF](https://arxiv.org/pdf/2601.09165v1)
+  - Matched: safety, safe
+- **From Snow to Rain: Evaluating Robustness, Calibration, and Complexity of Model-Based Robust Training**
+  - Authors: Josué Martínez-Martínez, Olivia Brown, Giselle Zeno, Pooya Khorrami, Rajmonda Caceres
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09153v1) | [PDF](https://arxiv.org/pdf/2601.09153v1)
+  - Matched: safety, safe, calibration, robustness, adversarial
+- **SSVP: Synergistic Semantic-Visual Prompting for Industrial Zero-Shot Anomaly Detection**
+  - Authors: Chenhao Fu, Han Fang, Xiuzheng Zheng, Wenbo Wei, Yonghua Li, Hao Sun, Xuelong Li
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09147v1) | [PDF](https://arxiv.org/pdf/2601.09147v1)
+  - Matched: calibration, robustness, anomaly detection
+- **SkinFlow: Efficient Information Transmission for Open Dermatological Diagnosis via Dynamic Visual Encoding and Staged RL**
+  - Authors: Lijun Liu, Linwei Chen, Zhishou Zhang, Meng Tian, Hengfu Cui, Ruiyang Li, Zhaocheng Liu, Qiang Ju et al.
+  - Published: 2026-01-14 | Category: `cs.CV`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09136v1) | [PDF](https://arxiv.org/pdf/2601.09136v1)
+  - Matched: safety, safe
+- **A Marketplace for AI-Generated Adult Content and Deepfakes**
+  - Authors: Shalmoli Ghosh, Matthew R. DeVerna, Filippo Menczer
+  - Published: 2026-01-14 | Category: `cs.CY`
+  - Links: [arXiv](https://arxiv.org/abs/2601.09117v1) | [PDF](https://arxiv.org/pdf/2601.09117v1)
+  - Matched: safe
 
 ---
 
