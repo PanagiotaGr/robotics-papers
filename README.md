@@ -26,12 +26,15 @@ This repo updates automatically via GitHub Actions.
 
 <!-- BEGIN TODAY -->
 ## ✅ Today
-
+## Latest
+<!-- LATEST:START -->
 **Last update:** 2026-01-15  
 **Daily archive:** `digests/2026-01-15.md`  
 
 _Auto-generated. Edit `config.yml` to change topics/keywords._
+<!-- LATEST:END -->
 
+<!-- TOPICS:START -->
 ### Browse by topic (links)
 
 - **[Autonomous Driving & AV](topics/autonomous-driving-av.md)**
@@ -43,6 +46,8 @@ _Auto-generated. Edit `config.yml` to change topics/keywords._
 - **[Multi-Robot & Swarms](topics/multi-robot-swarms.md)**
 - **[Safety, Robustness, Uncertainty](topics/safety-robustness-uncertainty.md)**
 - **[3D Gaussian Splatting & Neural Rendering (Robotics)](topics/3d-gaussian-splatting-neural-rendering-robotics.md)**
+
+<!-- TOPICS:END -->
 
 ### Autonomous Driving & AV
 
