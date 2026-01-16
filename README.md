@@ -41,7 +41,6 @@ Window: last **2** days
 
 
 <!-- BEGIN TODAY -->
-<!-- BEGIN TODAY -->
 
 ## ✅ Today
 
@@ -55,6 +54,8 @@ Window: last **2** days
 Updated: **2026-01-16**
 Window: last **2** days
 
+## Topic Navigator
+<!-- TOPICS:START -->
 | Topic                                               | Papers | Link                                                              |
 | --------------------------------------------------- | -----: | ----------------------------------------------------------------- |
 | Autonomous Driving & AV                             |      — | [view](topics/autonomous-driving-av.md)                           |
@@ -67,6 +68,7 @@ Window: last **2** days
 | Safety, Robustness, Uncertainty                     |      — | [view](topics/safety-robustness-uncertainty.md)                   |
 | 3D Gaussian Splatting & Neural Rendering (Robotics) |      — | [view](topics/3d-gaussian-splatting-neural-rendering-robotics.md) |
 
+<!-- TOPICS:END -->
 <!-- END TODAY -->
 
 
