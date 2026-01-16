@@ -24,6 +24,8 @@ This repo updates automatically via GitHub Actions.
 
 ---
 
+
+
 <!-- BEGIN TODAY -->
 ## ✅ Today
 
@@ -31,6 +33,18 @@ This repo updates automatically via GitHub Actions.
 **Daily archive:** `digests/2026-01-16.md`  
 
 _Auto-generated. Edit `config.yml` to change topics/keywords._
+
+## Latest arXiv Digest
+
+Updated: **2026-01-16**  
+Window: last **2** days
+
+| Topic | Papers | Link |
+|------|--------|------|
+| Autonomous Driving & AV | 18 | view |
+| SLAM, Localization & Mapping | 12 | view |
+| Drones & Aerial Robotics | 9 | view |
+| 3D Gaussian Splatting & Neural Rendering (Robotics) | 4 | view |
 
 ### Browse by topic (links)
 
