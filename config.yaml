@@ -1,140 +1,209 @@
-days_back: 2
-max_results_per_topic: 20
+project:
+  title: "Robotics arXiv Daily"
+  subtitle: "Daily arXiv digest for robotics/autonomy topics."
+  timezone: "Europe/Athens"
 
-match_in:
-  - title
-  - abstract
+storage:
+  data_dir: "data"
+  db_file: "papers.json"
+  digests_dir: "digests"
+  topics_dir: "topics"
 
-must_have_any:
-  - robot
-  - robotics
-  - autonomous
-  - navigation
-  - planning
-  - control
-  - slam
-  - localization
-  - mapping
-  - odometry
-  - uav
-  - drone
-  - lidar
-  - imu
-  - visual-inertial
-  - perception
+arxiv:
+  endpoint: "http://export.arxiv.org/api/query"
+  days_back: 2
+  max_results_per_topic: 20
+  fetch_multiplier: 10
+  hard_cap_results: 300
 
-fetch_multiplier: 10
-hard_cap_results: 300
+  allowed_categories:
+    - "cs.RO"
+    - "cs.CV"
+    - "cs.AI"
+    - "cs.LG"
+    - "eess.IV"
+    - "eess.SP"
+    - "stat.ML"
 
-categories:
-  - cs.RO
-  - cs.CV
-  - cs.AI
-  - cs.LG
-  - eess.IV
-  - eess.SP
-  - stat.ML
-
-topics:
-  Autonomous Driving & AV:
-    - autonomous driving
-    - self-driving
-    - intelligent vehicles
-    - motion forecasting
-    - trajectory planning
-    - behavior prediction
-    - end-to-end driving
-    - lane detection
-    - 3d detection
-    - multi-object tracking
-    - occupancy
-    - bev
-    - bird's-eye view
-    - hd map
-    - nuscenes
-    - waymo
-    - kitti
-    - argoverse
-
-  Drones & Aerial Robotics:
-    - drone
-    - uav
-    - aerial robotics
-    - quadrotor
-    - visual-inertial
-    - visual inertial
-    - imu
-    - autonomous flight
-    - landing
-    - obstacle avoidance
-
-  SLAM, Localization & Mapping:
+filters:
+  include_keywords:
+    - robot
+    - robotics
+    - autonomous
+    - navigation
+    - planning
+    - control
     - slam
     - localization
     - mapping
-    - loop closure
-    - lidar slam
-    - visual slam
-    - place recognition
     - odometry
-    - pose graph
+    - uav
+    - drone
+    - lidar
+    - imu
+    - visual-inertial
+    - perception
 
-  Navigation, Planning & Control:
-    - navigation
-    - motion planning
-    - path planning
-    - replanning
-    - model predictive control
-    - mpc
-    - optimal control
-    - rrt
-    - a*
-    - d*
-    - risk-aware
-    - safe planning
+  exclude_keywords: []
+  dedupe_mode: "topic"
 
-  Manipulation & Grasping:
-    - manipulation
-    - grasp
-    - grasping
-    - dexterous
-    - tactile
+topics:
+  - name: "Autonomous Driving & AV"
+    slug: "autonomous-driving-av"
+    query: >
+      (cat:cs.RO OR cat:cs.CV OR cat:cs.AI OR cat:cs.LG OR cat:eess.IV OR cat:eess.SP OR cat:stat.ML)
+    include_keywords:
+      - autonomous driving
+      - self-driving
+      - intelligent vehicles
+      - motion forecasting
+      - trajectory planning
+      - behavior prediction
+      - end-to-end driving
+      - lane detection
+      - 3d detection
+      - multi-object tracking
+      - occupancy
+      - bev
+      - bird's-eye view
+      - hd map
+      - nuscenes
+      - waymo
+      - kitti
+      - argoverse
+    exclude_keywords: []
+    boost_keywords: []
 
-  Robot Learning (RL, IL, Foundation Models):
-    - reinforcement learning
-    - imitation learning
-    - diffusion policy
-    - behavior cloning
-    - foundation model
-    - vision-language-action
-    - vla
-    - llm
+  - name: "Drones & Aerial Robotics"
+    slug: "drones-aerial-robotics"
+    query: >
+      (cat:cs.RO OR cat:cs.CV OR cat:cs.AI OR cat:cs.LG OR cat:eess.IV OR cat:eess.SP OR cat:stat.ML)
+    include_keywords:
+      - drone
+      - uav
+      - aerial robotics
+      - quadrotor
+      - visual-inertial
+      - visual inertial
+      - imu
+      - autonomous flight
+      - landing
+      - obstacle avoidance
+    exclude_keywords: []
+    boost_keywords: []
 
-  Multi-Robot & Swarms:
-    - multi-robot
-    - swarm
-    - coordination
-    - task allocation
-    - distributed
-    - consensus
+  - name: "SLAM, Localization & Mapping"
+    slug: "slam-localization-mapping"
+    query: >
+      (cat:cs.RO OR cat:cs.CV OR cat:cs.AI OR cat:cs.LG OR cat:eess.IV OR cat:eess.SP OR cat:stat.ML)
+    include_keywords:
+      - slam
+      - localization
+      - mapping
+      - loop closure
+      - lidar slam
+      - visual slam
+      - place recognition
+      - odometry
+      - pose graph
+    exclude_keywords: []
+    boost_keywords: []
 
-  Safety, Robustness, Uncertainty:
-    - safety
-    - safe
-    - uncertainty
-    - calibration
-    - out-of-distribution
-    - robustness
-    - adversarial
-    - anomaly detection
-    - fault detection
+  - name: "Navigation, Planning & Control"
+    slug: "navigation-planning-control"
+    query: >
+      (cat:cs.RO OR cat:cs.CV OR cat:cs.AI OR cat:cs.LG OR cat:eess.IV OR cat:eess.SP OR cat:stat.ML)
+    include_keywords:
+      - navigation
+      - motion planning
+      - path planning
+      - replanning
+      - model predictive control
+      - mpc
+      - optimal control
+      - rrt
+      - a*
+      - d*
+      - risk-aware
+      - safe planning
+    exclude_keywords: []
+    boost_keywords: []
 
-  3D Gaussian Splatting & Neural Rendering (Robotics):
-    - gaussian splatting
-    - 3d gaussian splatting
-    - 3dgs
-    - neural rendering
-    - nerf
-    - radiance field
-    - novel view synthesis
-    - 3d reconstruction
+  - name: "Manipulation & Grasping"
+    slug: "manipulation-grasping"
+    query: >
+      (cat:cs.RO OR cat:cs.CV OR cat:cs.AI OR cat:cs.LG OR cat:eess.IV OR cat:eess.SP OR cat:stat.ML)
+    include_keywords:
+      - manipulation
+      - grasp
+      - grasping
+      - dexterous
+      - tactile
+    exclude_keywords: []
+    boost_keywords: []
+
+  - name: "Robot Learning (RL, IL, Foundation Models)"
+    slug: "robot-learning"
+    query: >
+      (cat:cs.RO OR cat:cs.CV OR cat:cs.AI OR cat:cs.LG OR cat:eess.IV OR cat:eess.SP OR cat:stat.ML)
+    include_keywords:
+      - reinforcement learning
+      - imitation learning
+      - diffusion policy
+      - behavior cloning
+      - foundation model
+      - vision-language-action
+      - vla
+      - llm
+    exclude_keywords: []
+    boost_keywords: []
+
+  - name: "Multi-Robot & Swarms"
+    slug: "multi-robot-swarms"
+    query: >
+      (cat:cs.RO OR cat:cs.CV OR cat:cs.AI OR cat:cs.LG OR cat:eess.IV OR cat:eess.SP OR cat:stat.ML)
+    include_keywords:
+      - multi-robot
+      - swarm
+      - coordination
+      - task allocation
+      - distributed
+      - consensus
+    exclude_keywords: []
+    boost_keywords: []
+
+  - name: "Safety, Robustness, Uncertainty"
+    slug: "safety-robustness-uncertainty"
+    query: >
+      (cat:cs.RO OR cat:cs.CV OR cat:cs.AI OR cat:cs.LG OR cat:eess.IV OR cat:eess.SP OR cat:stat.ML)
+    include_keywords:
+      - safety
+      - safe
+      - uncertainty
+      - calibration
+      - out-of-distribution
+      - robustness
+      - adversarial
+      - anomaly detection
+      - fault detection
+    exclude_keywords: []
+    boost_keywords: []
+
+  - name: "3D Gaussian Splatting & Neural Rendering (Robotics)"
+    slug: "3dgs-neural-rendering-robotics"
+    query: >
+      (cat:cs.RO OR cat:cs.CV OR cat:cs.AI OR cat:cs.LG OR cat:eess.IV OR cat:eess.SP OR cat:stat.ML)
+    include_keywords:
+      - gaussian splatting
+      - 3d gaussian splatting
+      - 3dgs
+      - neural rendering
+      - nerf
+      - radiance field
+      - novel view synthesis
+      - 3d reconstruction
+    exclude_keywords: []
+    boost_keywords: []
+
+output:
+  max_daily_per_topic: 20
