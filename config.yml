@@ -1,12 +1,10 @@
 days_back: 2
 max_results_per_topic: 20
 
-# φέρνει περισσότερα από arXiv pool πριν το topic filtering
+match_in:
 
-fetch_multiplier: 10
-hard_cap_results: 300
-
-match_in: title+abstract
+* title
+* abstract
 
 must_have_any:
 
@@ -90,10 +88,8 @@ Navigation, Planning & Control:
 - mpc
 - optimal control
 - rrt
-- a star
-- d star
-- astar
-- dstar
+- a*
+- d*
 - risk-aware
 - safe planning
 
@@ -142,7 +138,3 @@ Safety, Robustness, Uncertainty:
 - radiance field
 - novel view synthesis
 - 3d reconstruction
-
-- name: Run arXiv digest
-  run: |
-    python scripts/fetch_arxiv_daily.py --config config.yaml
