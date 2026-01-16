@@ -2,139 +2,136 @@ days_back: 2
 max_results_per_topic: 20
 
 match_in:
-
-* title
-* abstract
+  - title
+  - abstract
 
 must_have_any:
-
-* robot
-* robotics
-* autonomous
-* navigation
-* planning
-* control
-* slam
-* localization
-* mapping
-* odometry
-* uav
-* drone
-* lidar
-* imu
-* visual-inertial
-* perception
+  - robot
+  - robotics
+  - autonomous
+  - navigation
+  - planning
+  - control
+  - slam
+  - localization
+  - mapping
+  - odometry
+  - uav
+  - drone
+  - lidar
+  - imu
+  - visual-inertial
+  - perception
 
 categories:
-
-* cs.RO
-* cs.CV
-* cs.AI
-* cs.LG
-* eess.IV
-* eess.SP
-* stat.ML
+  - cs.RO
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  - eess.IV
+  - eess.SP
+  - stat.ML
 
 topics:
-Autonomous Driving & AV:
-- autonomous driving
-- self-driving
-- intelligent vehicles
-- motion forecasting
-- trajectory planning
-- behavior prediction
-- end-to-end driving
-- lane detection
-- 3d detection
-- multi-object tracking
-- occupancy
-- bev
-- bird's-eye view
-- hd map
-- nuscenes
-- waymo
-- kitti
-- argoverse
+  Autonomous Driving & AV:
+    - autonomous driving
+    - self-driving
+    - intelligent vehicles
+    - motion forecasting
+    - trajectory planning
+    - behavior prediction
+    - end-to-end driving
+    - lane detection
+    - 3d detection
+    - multi-object tracking
+    - occupancy
+    - bev
+    - bird's-eye view
+    - hd map
+    - nuscenes
+    - waymo
+    - kitti
+    - argoverse
 
-Drones & Aerial Robotics:
-- drone
-- uav
-- aerial robotics
-- quadrotor
-- visual-inertial
-- visual inertial
-- imu
-- autonomous flight
-- landing
-- obstacle avoidance
+  Drones & Aerial Robotics:
+    - drone
+    - uav
+    - aerial robotics
+    - quadrotor
+    - visual-inertial
+    - visual inertial
+    - imu
+    - autonomous flight
+    - landing
+    - obstacle avoidance
 
-SLAM, Localization & Mapping:
-- slam
-- localization
-- mapping
-- loop closure
-- lidar slam
-- visual slam
-- place recognition
-- odometry
-- pose graph
+  SLAM, Localization & Mapping:
+    - slam
+    - localization
+    - mapping
+    - loop closure
+    - lidar slam
+    - visual slam
+    - place recognition
+    - odometry
+    - pose graph
 
-Navigation, Planning & Control:
-- navigation
-- motion planning
-- path planning
-- replanning
-- model predictive control
-- mpc
-- optimal control
-- rrt
-- a*
-- d*
-- risk-aware
-- safe planning
+  Navigation, Planning & Control:
+    - navigation
+    - motion planning
+    - path planning
+    - replanning
+    - model predictive control
+    - mpc
+    - optimal control
+    - rrt
+    - a*
+    - d*
+    - risk-aware
+    - safe planning
 
-Manipulation & Grasping:
-- manipulation
-- grasp
-- grasping
-- dexterous
-- tactile
+  Manipulation & Grasping:
+    - manipulation
+    - grasp
+    - grasping
+    - dexterous
+    - tactile
 
-Robot Learning (RL, IL, Foundation Models):
-- reinforcement learning
-- imitation learning
-- diffusion policy
-- behavior cloning
-- foundation model
-- vision-language-action
-- vla
-- llm
+  Robot Learning (RL, IL, Foundation Models):
+    - reinforcement learning
+    - imitation learning
+    - diffusion policy
+    - behavior cloning
+    - foundation model
+    - vision-language-action
+    - vla
+    - llm
 
-Multi-Robot & Swarms:
-- multi-robot
-- swarm
-- coordination
-- task allocation
-- distributed
-- consensus
+  Multi-Robot & Swarms:
+    - multi-robot
+    - swarm
+    - coordination
+    - task allocation
+    - distributed
+    - consensus
 
-Safety, Robustness, Uncertainty:
-- safety
-- safe
-- uncertainty
-- calibration
-- out-of-distribution
-- robustness
-- adversarial
-- anomaly detection
-- fault detection
+  Safety, Robustness, Uncertainty:
+    - safety
+    - safe
+    - uncertainty
+    - calibration
+    - out-of-distribution
+    - robustness
+    - adversarial
+    - anomaly detection
+    - fault detection
 
-3D Gaussian Splatting & Neural Rendering (Robotics):
-- gaussian splatting
-- 3d gaussian splatting
-- 3dgs
-- neural rendering
-- nerf
-- radiance field
-- novel view synthesis
-- 3d reconstruction
+  3D Gaussian Splatting & Neural Rendering (Robotics):
+    - gaussian splatting
+    - 3d gaussian splatting
+    - 3dgs
+    - neural rendering
+    - nerf
+    - radiance field
+    - novel view synthesis
+    - 3d reconstruction
