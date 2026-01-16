@@ -112,6 +112,41 @@ def match_count(text: str, patterns: List[re.Pattern]) -> int:
     return sum(1 for p in patterns if p.search(text))
 
 
+def normalize_match_in(value: Any) -> str:
+    """
+    Accept:
+      - "title", "abstract", "title+abstract"
+      - ["title","abstract"] (any order)
+    Return one of: "title", "abstract", "title+abstract"
+    """
+    if value is None:
+        return "title+abstract"
+
+    if isinstance(value, str):
+        s = value.strip().lower()
+        if s in ("title", "ti"):
+            return "title"
+        if s in ("abstract", "summary", "abs"):
+            return "abstract"
+        if s in ("title+abstract", "title+abs", "ti+abs", "both", "all"):
+            return "title+abstract"
+        return "title+abstract"
+
+    if isinstance(value, (list, tuple, set)):
+        items = {str(x).strip().lower() for x in value if str(x).strip()}
+        has_title = any(x in ("title", "ti") for x in items)
+        has_abs = any(x in ("abstract", "summary", "abs") for x in items)
+        if has_title and has_abs:
+            return "title+abstract"
+        if has_title:
+            return "title"
+        if has_abs:
+            return "abstract"
+        return "title+abstract"
+
+    return "title+abstract"
+
+
 # ----------------------------
 # arXiv fetch (pool by categories)
 # ----------------------------
@@ -144,7 +179,10 @@ def fetch_arxiv_pool(search_query: str, max_results: int) -> List[Paper]:
         title = normalize_ws(html.unescape(getattr(e, "title", "")))
         summary = normalize_ws(html.unescape(getattr(e, "summary", "")))
         link = getattr(e, "link", "")
-        authors = [a.name for a in getattr(e, "authors", []) or [] if hasattr(a, "name")]
+        authors = [
+            a.name for a in getattr(e, "authors", []) or []
+            if hasattr(a, "name")
+        ]
         published = entry_date_utc(e)
 
         tags = getattr(e, "tags", []) or []
@@ -226,7 +264,12 @@ def write_index(updated_str: str, topics_meta: List[Dict[str, Any]], days_back: 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--config", required=True, help="Path to config.yaml")
+    ap.add_argument(
+        "--config",
+        "-c",
+        default=os.environ.get("ARXIV_DAILY_CONFIG", "config.yaml"),
+        help="Path to config.yaml (default: config.yaml or env ARXIV_DAILY_CONFIG)",
+    )
     args = ap.parse_args()
 
     cfg = load_config(args.config)
@@ -238,7 +281,7 @@ def main() -> int:
     fetch_multiplier = int(cfg.get("fetch_multiplier", 10))
     hard_cap_results = int(cfg.get("hard_cap_results", 300))
 
-    match_in = (cfg.get("match_in", "title+abstract") or "title+abstract").strip().lower()
+    match_in = normalize_match_in(cfg.get("match_in", "title+abstract"))
 
     must_have_any = cfg.get("must_have_any", []) or []
     exclude_any = cfg.get("exclude_any", []) or []
@@ -249,7 +292,6 @@ def main() -> int:
         raise SystemExit("Config error: 'topics' must be a mapping of {Topic Name: [keywords...]}")
 
     # Decide fetch size for the pool
-    # We want enough papers so topics don't go 0 just because top 20 are off-topic.
     fetch_n = min(max_per_topic * fetch_multiplier, hard_cap_results)
 
     # Build pool query and fetch
@@ -261,14 +303,13 @@ def main() -> int:
 
     # 2) Choose matching text field(s)
     def paper_text(p: Paper) -> str:
-        if match_in in ("title", "ti"):
+        if match_in == "title":
             return norm(p.title)
-        if match_in in ("abstract", "summary", "abs"):
+        if match_in == "abstract":
             return norm(p.summary)
-        # default
         return norm(p.title + " " + p.summary)
 
-    # 3) Global exclude (if any) - applied on chosen match_in text
+    # 3) Global exclude (if any)
     if exclude_any:
         exc_pats = compile_terms(exclude_any)
         pool = [p for p in pool if not matches_any(paper_text(p), exc_pats)]
@@ -315,7 +356,7 @@ def main() -> int:
 
     # Index
     write_index(updated_str, topics_meta, days_back)
-    print("Done. Pages generated under docs/")
+    print(f"Done. Pages generated under docs/ (config: {args.config})")
 
     return 0
 
